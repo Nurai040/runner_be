@@ -9,7 +9,7 @@ async function bootstrap() {
     prefix: '/uploads/',
   });
   app.enableCors({
-    origin: ['http://localhost:3000'],
+    origin: ['http://localhost:3000', 'https://runner-fe.vercel.app'],
     credentials: true,
   });
   await app.listen(process.env.PORT || 3000);
