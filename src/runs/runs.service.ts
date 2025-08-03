@@ -10,8 +10,8 @@ export class RunsService {
 
     return prisma.run.create({
       data: {
-        distance,
-        time,
+        distance: Number(distance),
+        time: Number(time),
         location,
         photoUrl: photoUrl || null,
         userId,
