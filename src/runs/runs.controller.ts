@@ -10,8 +10,7 @@ export class RunsController {
 
   @Post()
   createRun(@Body() body, @Req() req: Request) {
-    const user = (req as any).user.userId;
-    return this.runsService.createRun(body, user.userId);
+    return this.runsService.createRun(body, (req as any).user.userId);
   }
 
   @Get()
